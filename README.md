@@ -25,76 +25,26 @@ You'll use the OpenWeather API to fetch weather information from a certain zip c
 
 At the end of this exercise, your solution will look something like what's shown here.
 
-
 <img src="https://res.cloudinary.com/briezh/image/upload/v1556235234/weather_gi72z2.png" class="responsive" />
 
 ---
 
-## Requirements
+## Steps to Achieve
 
-Make a new component called `Weather`.
-
+* Fork and clone this repo
+* cd into the new folder and run `npx create-react-app .` to generate a new react app in the repo.
+* sign up for an API [here](https://openweathermap.org/price)
+* Make a new component called `Weather`.
 On your `Weather` page, ask the user to input a zip code.
-
-- You can learn more about forms [here](https://facebook.github.io/react/docs/forms.html).
-  - When this event fires, take the `event.target.value` and `fetch()` from the OpenWeather API.
-
-- Use the response from the API to display the current temperature, the high and low temperatures, the current weather description, and the name of the city.
-  - Note: Our solution uses Fahrenheit. You're free to use Celsius or Kelvins if you'd like.
-
-**Important Notes**:
-
-- Because the OpenWeather API is not an open API, every request must end with this API key:  `&appid=052f26926ae9784c2d677ca7bc5dec98`.
-
-- As an example, this is a URL to which you might send a `fetch()` request: `http://api.openweathermap.org/data/2.5/weather?zip=60614,us&appid=052f26926ae9784c2d677ca7bc5dec98`.
-
-### Skeleton Code (Starter)
-
-Here is a functional Weather component starter:
-
-```js
-import { Component } from 'react';
-
-class Weather extends Component {
-  state = {
-    // Your required states here
-  }
-
-  handleChange = (event) => {
-    this.setState({ zipcode: event.target.value }, () => {
-      console.log('Your zip code is', this.state.zipcode);
-    });
-  }
-
-  handleSubmit = (event) => {
-    // Your fetch call here
-    // Your state updates go under function(json)
-  }
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="zipcode">Please enter your zip code for the weather:</label>
-          <input 
-            id="zipcode" 
-            type="text" 
-            onChange={this.handleChange} 
-          />
-          <input type="submit" value="Get my forecast!" />
-        </form>
-        <div>
-          { /* Display weather information here */}
-        </div>
-      </div>
-    )
-  }
-}
-
-
-export default Weather;
-```
-
+	* you will need to use a 'controlled form' where your `Weather` component's state controller the value of the input
+	* store what the user has typed in your `Weather` component's state.
+	* you will need an `onChange` event handler, that updates state as the user typers
+	* you will need an `onSubmit` event handler, that is invoked when the user submits the form, don't forget to prevent the default behavior of the form submission!
+	* You can learn more about forms [here](https://facebook.github.io/react/docs/forms.html).
+* when the form is submitted, use the value in state and `fetch()` from the OpenWeather API. (note, you may `npm i axios` and use it instead of fetch, if you prefer)
+	* read [here](https://openweathermap.org/current#zip) how to ping the API and get results based on zipcode
+* Use the response from the API to display the current temperature, the high and low temperatures, the current weather description, and the name of the city.
+	* Note: Our solution uses Fahrenheit. You're free to use Celsius or Kelvins if you'd like.
 
 **Need a Hint or Two?**
 
