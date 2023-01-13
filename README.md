@@ -33,7 +33,7 @@ At the end of this exercise, your solution will look something like what's shown
 
 * Fork and clone this repo
 * cd into the new folder and run `npx create-react-app .` to generate a new react app in the repo.
-* sign up for an API [here](https://openweathermap.org/price)
+* sign up for an API key [here](https://openweathermap.org/price)
 * Make a new component called `Weather`.
 On your `Weather` page, ask the user to input a zip code.
 	* you will need to use a 'controlled form' where your `Weather` component's state controls the value of the input
