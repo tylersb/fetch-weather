@@ -38,7 +38,7 @@ At the end of this exercise, your solution will look something like what's shown
 On your `Weather` page, ask the user to input a zip code.
 	* you will need to use a 'controlled form' where your `Weather` component's state controls the value of the input
 	* store what the user has typed in your `Weather` component's state.
-	* you will need an `onChange` event handler, that updates state as the user typers
+	* you will need an `onChange` event handler, that updates state as the user types
 	* you will need an `onSubmit` event handler, that is invoked when the user submits the form, don't forget to prevent the default behavior of the form submission!
 	* You can learn more about forms [here](https://facebook.github.io/react/docs/forms.html).
 * when the form is submitted, use the value in state and `fetch()` from the OpenWeather API. (note, you may `npm i axios` and use it instead of fetch, if you prefer)
