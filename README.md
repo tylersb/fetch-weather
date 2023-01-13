@@ -36,7 +36,7 @@ At the end of this exercise, your solution will look something like what's shown
 * sign up for an API [here](https://openweathermap.org/price)
 * Make a new component called `Weather`.
 On your `Weather` page, ask the user to input a zip code.
-	* you will need to use a 'controlled form' where your `Weather` component's state controller the value of the input
+	* you will need to use a 'controlled form' where your `Weather` component's state controls the value of the input
 	* store what the user has typed in your `Weather` component's state.
 	* you will need an `onChange` event handler, that updates state as the user typers
 	* you will need an `onSubmit` event handler, that is invoked when the user submits the form, don't forget to prevent the default behavior of the form submission!
